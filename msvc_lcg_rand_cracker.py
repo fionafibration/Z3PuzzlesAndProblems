@@ -107,7 +107,7 @@ def predict_next(known: list, modulus: int = INTMAX, ):
     return next_probability, seeds
 
 
-seeds = find_seed([69, 69, 69, 69], 100)
+seeds = find_seed([1, 2, 3, 4, 5, 6], 10)
 
 print(seeds)
 
