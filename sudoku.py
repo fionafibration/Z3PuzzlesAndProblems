@@ -7,9 +7,7 @@ values = [[Int(f's_{x}_{y}') for y in range(9)] for x in range(9)]
 
 problem = '4.....8.5.3..........7......2.....6.....8.4......1.......6.3.7.5..2.....1.4......'
 
-assert(len(problem) == 81)
-
-
+assert (len(problem) == 81)
 
 for y in range(9):
     for x in range(9):
@@ -23,8 +21,6 @@ for y in range(9):
 
         else:
             s.add(And(values[x][y] <= 9, values[x][y] >= 1))
-
-
 
 # Rows must have unique values
 for row in range(9):
@@ -48,7 +44,6 @@ for x in range(0, 9, 3):
             [values[x + i][y + j] for i in range(3) for j in range(3)]
         ))
 
-
 solutions = 0
 
 while s.check() == sat:
@@ -58,7 +53,6 @@ while s.check() == sat:
         for x in range(9):
 
             print('%s ' % s.model()[values[x][y]], end='')
-
 
             # Vertical box seperatators!
             if x in [2, 5]:
