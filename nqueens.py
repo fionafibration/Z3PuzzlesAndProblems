@@ -1,6 +1,6 @@
 from z3 import *
 
-N = 6
+N = 12
 
 UNICODE = True
 
